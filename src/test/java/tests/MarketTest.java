@@ -16,9 +16,10 @@ public class MarketTest extends DriverSettings {
     @Test
     void TestXiaomiRedmiBook() {
         open("https://yandex.ru/");
-        MainPageSteps.checkMainPageTitle();
 
+        MainPageSteps.checkMainPageTitle();
         MainPageSteps.checkMarketSectionDisplayed();
+        
         MainPageSteps.clickMarketSection();
         ArrayList<String> tabs2 = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs2.get(1));
